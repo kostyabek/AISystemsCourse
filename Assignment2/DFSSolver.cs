@@ -4,7 +4,6 @@ public class DFSSolver
 {
     private readonly int _n;
     private readonly int _m;
-    private readonly int _k;
     private readonly int _numberOfPossibleStates;
 
     private readonly JugsState _initialState;
@@ -12,15 +11,13 @@ public class DFSSolver
     private readonly List<Node> _graph;
     private readonly List<JugsState> _searchStepsHistory;
 
-    public DFSSolver(int n, int m, int k)
+    public DFSSolver(int n, int m, JugsState targetState)
     {
         _n = n;
         _m = m;
-        _k = k;
         _numberOfPossibleStates = (_n + 1) * (_m + 1);
-
+        _targetState = targetState;
         _initialState = new JugsState(0, 0);
-        _targetState = new JugsState(_k, 0);
         _graph = new List<Node>();
         _searchStepsHistory = new List<JugsState>();
 

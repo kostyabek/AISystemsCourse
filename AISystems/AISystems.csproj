@@ -8,7 +8,13 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Portable.BouncyCastle" Version="1.9.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\Assignment2\Assignment2.csproj" />
+    <ProjectReference Include="..\Assignment3AIGenerated\Assignment3_New.csproj" />
+    <ProjectReference Include="..\Assignment3\Assignment3_Old.csproj" />
   </ItemGroup>
 
 </Project>
